@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning - FeiyuZhao, Chenxi Xiao">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+<!--  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">-->
+  <!-- TODO: List all authors -->
+<!--  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">-->
+    <meta name="author" content="Anonymous_Authors">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+<!--  <meta property="og:type" content="article">-->
+<!--  &lt;!&ndash; TODO: Replace with your institution or lab name &ndash;&gt;-->
+<!--  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">-->
+<!--  &lt;!&ndash; TODO: Same as paper title above &ndash;&gt;-->
+<!--  <meta property="og:title" content="NLiPsCalib: A Physics-Consistent and Efficient Calibration Framework for High-Fidelity 3D Reconstruction of Curved Visuotactile Sensors">-->
+<!--  &lt;!&ndash; TODO: Same as description above &ndash;&gt;-->
+<!--  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">-->
+<!--  &lt;!&ndash; TODO: Replace with your actual website URL &ndash;&gt;-->
+<!--  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">-->
+<!--  &lt;!&ndash; TODO: Create a 1200x630px preview image and update path &ndash;&gt;-->
+<!--  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">-->
+<!--  <meta property="og:image:width" content="1200">-->
+<!--  <meta property="og:image:height" content="630">-->
+<!--  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">-->
+<!--  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">-->
+<!--  <meta property="article:author" content="Anonymous Authors">-->
+<!--  <meta property="article:section" content="Research">-->
+<!--  <meta property="article:tag" content="KEYWORD1">-->
+<!--  <meta property="article:tag" content="KEYWORD2">-->
+
+  <!-- Twitter -->
+<!--  <meta name="twitter:card" content="summary_large_image">-->
+<!--  &lt;!&ndash; TODO: Replace with your lab/institution Twitter handle &ndash;&gt;-->
+<!--  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">-->
+<!--  &lt;!&ndash; TODO: Replace with first author's Twitter handle &ndash;&gt;-->
+<!--  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">-->
+<!--  &lt;!&ndash; TODO: Same as paper title above &ndash;&gt;-->
+<!--  <meta name="twitter:title" content="PAPER_TITLE">-->
+<!--  &lt;!&ndash; TODO: Same as description above &ndash;&gt;-->
+<!--  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">-->
+<!--  &lt;!&ndash; TODO: Same as social preview image above &ndash;&gt;-->
+<!--  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">-->
+<!--  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">-->
+
+  <!-- Academic/Research Specific -->
+<!--  <meta name="citation_title" content="NLiPsCalib: A Physics-Consistent and Efficient Calibration Framework for High-Fidelity 3D Reconstruction of Curved Visuotactile Sensors">-->
+<!--  <meta name="citation_author" content="Anonymous , Authors">-->
+<!--&lt;!&ndash;  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">&ndash;&gt;-->
+<!--  <meta name="citation_publication_date" content="2025">-->
+<!--  <meta name="citation_conference_title" content="CONFERENCE_NAME">-->
+<!--  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">-->
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning</title>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/icon2.png">
+  <link rel="apple-touch-icon" href="static/images/icon2.png">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<head>
+    <!-- 先配置 MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],  // 支持 \( ... \) 和 $ ... $
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <!-- 再加载 MathJax 脚本 -->
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-3 publication-title">Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+<!--              <span class="author-block">-->
+<!--                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Authors</a>,</span>-->
+
+            <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Feiyu Zhao</a>,</span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Chenxi Xiao</a><sup>*</sup>,</span>
+            </div>
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Shanghaitech University<br>IEEE Robotics and Automation Letter</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+<!--                <span class="link-block">-->
+<!--                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"-->
+<!--                  class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                    <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/RA-L_Video_Compressed.mp4" type="video/mp4">
+      </video>
+<!--        <img src="static/images/teaser.png">-->
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+       Video
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+              Coordinate Measuring Machines (CMMs) are widely used for high-precision inspection of industrial parts, particularly in scenarios where visual systems are ineffective or cost-prohibitive. However, conventional CMMs rely on CAD model priors and user-defined probing paths, which limit their applicability and efficiency in measuring freeform parts. To overcome these limitations, we present a fully autonomous, CAD model-free, tactile-based framework that enables dense 3D shape reconstruction to facilitate subsequent measurements. Our approach leverages a dual Gaussian Process Implicit Surface architecture, termed Exploration-Reconstruction GPIS (ER-GPIS), which enables both high-fidelity shape reconstruction and uncertainty estimation on the object’s surface. A hybrid exploration motion planner is then employed to adaptively sample surface geometries by integrating local surface exploration, global exploration, and contact recovery policies for robust shape estimation. Extensive real-world experiments demonstrate that the proposed method effectively reconstructs object geometries across diverse shapes, highlighting its ability to autonomously reconstruct and measure both surfaces and internal features without relying on CAD model priors.<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.-->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Pipeline -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+
+      <h2 class="title is-3">Pipeline</h2>
+
+        <p class="content is-size-5" style="margin-bottom: 1.5em;">
+            Overview of the proposed technical pipeline. The system consists of three interconnected modules:
+            <span style="color: #2e7d32;"><strong>(1) Shape &amp; Uncertainty Estimation</strong></span>:
+            Two Gaussian Process models are employed.
+            <em>E-GPIS</em> estimates uncertainty \( \sigma_E^2(x) \) to guide exploration,
+            while <em>R-GPIS</em> estimates \( \mu_R^2(x) \) for shape reconstruction.
+            <span style="color: #1e88e5;"><strong>(2) Exploration Motion Planner</strong></span>:
+            The motion direction \( \mathbf{d} \) is calculated from either of three policies to guide exploration:
+            <strong><em>Local Sliding Policy</em></strong> slides toward higher local uncertainty \( \mathbf{d}_{\text{local}} \);
+            <strong><em>Global Exploration Policy</em></strong> redirects toward highest global uncertain regions \( \mathbf{d}_{\text{global}} \);
+            <strong><em>Contact Recovery Policy</em></strong> restores contact along surface normals \( \mathbf{d}_{\text{recontact}} \).
+            <span style="color: #e53935;"><strong>(3) Robot Execution</strong></span>:
+            The robot system includes an FT-sensor and an exploration probe.
+            The selected direction is executed on this robot system via a low-level controller.
+        </p>
+
+
+
+
+
+
+        <figure style="display: inline-block; max-width: 95%;">
+          <img src="static/images/pipeline.jpg"
+               alt="Pipeline overview"
+               loading="lazy"
+               style="width: 100%; height: auto;"/>
+<!--        <figcaption class="has-text-grey is-size-6" style="margin-top: 0.5em;">-->
+<!--          Using the proposed NLiPsTac tactile sensor, the framework collects a calibration-->
+<!--          dataset with NLiPs, enabling the training of NLiPsNet, a network designed for-->
+<!--          real-time 3D shape inference under trichromatic illumination.-->
+<!--        </figcaption>-->
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+
+      <!-- 标题居中 -->
+      <h2 class="title is-3">Reconstructed Results</h2>
+        <p class="content is-size-5" style="margin-bottom: 1.5em;">
+            Explore different objects, obtain trajectories, and reconstruct the results.
+</p>
+      <!-- 用包裹容器来居中和限宽，不改 carousel 本体 -->
+      <div style="max-width: 90%; margin: 0 auto;">
+        <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+                <img src="static/images/o1.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Cylindrical</h2>
+            </div>
+            <div class="item">
+            <img src="static/images/o1.jpg" alt="First research result visualization" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Inclined</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o3.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Irregular</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o4.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Emoji-shaped</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o5.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Conical</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o6.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Hemispherica</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o7.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Dome</h2>
+            </div>
+            <div class="item">
+                <img src="static/images/o8.jpg" alt="First research result visualization" loading="lazy"/>
+                <h2 class="subtitle has-text-centered">Polygona</h2>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- End image carousel -->
+
+<!-- Calibration Accuracy -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+
+      <h2 class="title is-3">Reconstruction Accuracy</h2>
+
+        <div class="table-container" style="margin: 1.5em 0;">
+            <table class="table is-bordered is-striped is-fullwidth is-size-6">
+                <caption>
+                    Quantitative evaluation of reconstruction accuracy, runtime, and peak memory usage across all test objects.
+                </caption>
+                <thead>
+                <tr>
+                    <th><strong>Object</strong></th>
+                    <th>OBJ.1 (cylindrical)</th>
+                    <th>OBJ.2 (inclined)</th>
+                    <th>OBJ.3 (irregular)</th>
+                    <th>OBJ.4 (emoji)</th>
+                    <th>OBJ.5 (conical)</th>
+                    <th>OBJ.6 (hemispherical)</th>
+                    <th>OBJ.7 (domed)</th>
+                    <th>OBJ.8 (polygonal)</th>
+                    <th><strong>Average</strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>CD (mm<sup>2</sup>)</td>
+                    <td>3.02</td>
+                    <td>4.50</td>
+                    <td>4.35</td>
+                    <td>8.53</td>
+                    <td>7.54</td>
+                    <td>2.86</td>
+                    <td>3.01</td>
+                    <td>8.80</td>
+                    <td><strong>5.270</strong></td>
+                </tr>
+                <tr>
+                    <td>RMSD (mm)</td>
+                    <td>0.85</td>
+                    <td>1.10</td>
+                    <td>5.17</td>
+                    <td>2.81</td>
+                    <td>1.94</td>
+                    <td>1.19</td>
+                    <td>1.22</td>
+                    <td>2.09</td>
+                    <td><strong>2.046</strong></td>
+                </tr>
+                <tr>
+                    <td>Dia. Err. (mm)</td>
+                    <td>3.81</td>
+                    <td>2.10</td>
+                    <td>4.89</td>
+                    <td>5.29</td>
+                    <td>2.12</td>
+                    <td>0.97</td>
+                    <td>1.08</td>
+                    <td>2.66</td>
+                    <td><strong>2.865</strong></td>
+                </tr>
+                <tr>
+                    <td>Run Time (min)</td>
+                    <td>6m18s</td>
+                    <td>6m03s</td>
+                    <td>6m15s</td>
+                    <td>8m39s</td>
+                    <td>25m00s</td>
+                    <td>14m19s</td>
+                    <td>18m15s</td>
+                    <td>21m39s</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>GPU Memory (GB)</td>
+                    <td>3.6</td>
+                    <td>3.4</td>
+                    <td>3.5</td>
+                    <td>4.1</td>
+                    <td>12.1</td>
+                    <td>7.4</td>
+                    <td>7.5</td>
+                    <td>8.1</td>
+                    <td>--</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Real-Time Reconstruct Results -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+
+          <h2 class="title is-3">Time cost of different GPs</h2>
+
+            <figure style="display: inline-block; max-width: 80%;">
+                <img src="static/images/compare_all.png"
+                     alt="Calibration accuracy results"
+                     loading="lazy"
+                     style="width: 100%; height: auto;"/>
+                <figcaption class="has-text-grey is-size-6" style="margin-top: 0.5em;">
+                    Inference time comparison of different GP regressors on GPU and CPU, \(q\) denotes No. points paralleled for query.                </figcaption>
+            </figure>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; TODO: Replace with your YouTube video ID &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container has-text-centered">-->
+<!--      <h2 class="title is-3">Sensor Fabrication (Video Coming Soon)</h2>-->
+<!--      <div class="columns is-centered">-->
+<!--        <div class="column is-four-fifths">-->
+
+<!--          &lt;!&ndash; 视频 &ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="publication-video" style="margin-bottom: 1.5em;">&ndash;&gt;-->
+<!--&lt;!&ndash;            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0"&ndash;&gt;-->
+<!--&lt;!&ndash;                    frameborder="0"&ndash;&gt;-->
+<!--&lt;!&ndash;                    allow="autoplay; encrypted-media"&ndash;&gt;-->
+<!--&lt;!&ndash;                    allowfullscreen&ndash;&gt;-->
+<!--&lt;!&ndash;                    style="width:100%; height:400px;"></iframe>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--          &lt;!&ndash; 图片 &ndash;&gt;-->
+<!--          <figure style="display: inline-block; max-width: 100%;">-->
+<!--            <img src="static/images/SensorFabrication.jpg"-->
+<!--                 alt="Sensor fabrication process"-->
+<!--                 loading="lazy"-->
+<!--                 style="width:100%; height:auto;"/>-->
+<!--            <figcaption class="has-text-grey is-size-6" style="margin-top: 0.5em;">-->
+<!--              Fabrication process of the NLiPsTac sensor.-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      &lt;!&ndash; TODO: Replace with your poster PDF &ndash;&gt;-->
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{AESRM2025,
+  title={Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning},
+  author={Feiyu Zhao, Chenxi Xiao},
+  journal={IEEE Robotics and Automation Letter},
+  year={2025},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation-->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+           </a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
